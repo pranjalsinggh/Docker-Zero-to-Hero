@@ -24,8 +24,9 @@ user-defined bridge networks when you need separate application networks.
 
 ![image](https://user-images.githubusercontent.com/43399466/217745543-f40e5614-ac34-4b78-85a9-91b24512388d.png)
 
-Containers on the same user-defined bridge can communicate with each other and resolve each other by container name. Containers on
-different bridge networks are isolated from one another unless they are connected to a shared network. To create a user-defined bridge:
+Containers on the same user-defined bridge can communicate with each other and resolve each other by container name. Different bridge
+networks are isolated from one another by default, but containers may still reach ports published by containers on other networks.
+Containers on different bridges can communicate directly when connected to a shared network. To create a user-defined bridge:
 
 ```
 docker network create -d bridge my_bridge
